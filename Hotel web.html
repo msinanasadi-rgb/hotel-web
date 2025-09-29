@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel.com</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;                                                                                                                                                                          
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        
+        header {
+            background-color: #e98400c5;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+       
+        nav {
+            background-color: #333;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        
+       
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .content h2 {
+            margin-bottom: 1rem;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        
+      
+        
+        .video {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+       
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #45a049;
+        }
+        
+       
+        .contact-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .contact-form .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            .gallery {
+                flex-direction: column;
+            }
+        }
+        .map{
+            padding-left: 20px;
+            padding-top: 50px;
+        }
+        .display{
+            width: 30%;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img class="display" src="images/Hotel.img1.jpg" alt="Sample Image 1">
+                <img class="display" src="images/Hotel.img2.jpg" alt="Sample Image 2">
+                <img class="display" src="images/Hotel.img3.jpg" alt="Sample Image 3">
+            </div>
+            <div class="video">
+                <h2>Our Introduction Video</h2>
+                <video width="600" controls>
+                    <source src="vs.videos/Hotel.vid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+            </div>
+            <div class="buttons">
+                <a href="#">Order Now</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Leave us a message or visit us.</p>
+        </div>
+        <div class="contact-form">
+            <div class="column">
+                <img class="map" src="images/Hotel.map.jpg" alt="map.1212" width="550px" height="400px">
+           </div>
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>visit again.</p>
+    </footer>
+</body>
+</html>
+ 
